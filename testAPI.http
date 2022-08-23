@@ -1,0 +1,54 @@
+post http://localhost:3000/api/modules/create
+Content-Type: application/json
+
+{
+    "moduleName":"department",
+    "createModule": 1
+}
+
+###
+post http://localhost:3000/api/users/create
+Content-Type: application/json
+
+{
+    "Applicant_Name": "Sachin Choudhary",
+    "Father_Name": "Radheshyam Choudhary",
+    "Mother_Name": "Usha Choudhary",
+    "DOB": "1998/06/05",
+    "Email":"sachin123@gmail.com",
+    "Contact_No":9886667678,
+    "Address": "9/3, Gandhi Nagar Indore, dist Indore MP",
+    "Graduation":"B.C.A",
+    "Post_Graduation": "M.C.A",
+    "Applying_Job_Title": "Nodejs Developer",
+    "Past_Job_Title": null,
+    "Past_Job_Designation":null,
+    "Past_Job_Organization":null,
+    "Past_Organization_Joining_Date": null,
+    "Past_Organization_Leaving_Date":null,
+    "Past_Organization_Leaving_Reason":null,
+    "Reference":"Universal Informatics",
+    "Approved_by_HR": null,
+    "Approved_by_Admin": null
+}
+
+###
+
+post http://localhost:3000/api/roles/create
+Content-Type: application/json
+
+{
+    "Role_Title": "Vendor-Intern"
+}
+
+###
+post http://localhost:3000/api/user-roles/create
+Content-Type: application/json
+
+{
+    "user_id": 103,
+    "role_id":5
+}
+
+###
+get http://localhost:3000/api/roles/getUsersByRoleId/4
